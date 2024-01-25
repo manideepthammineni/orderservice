@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>OrderDetails</title>
+</head>
+<body>
+<h1>Order Id Details</h1>
+
+
+
+<table>
+    <thead>
+    <td> <b>Order Id</b></td>
+    <td> <b>amount</b></td>
+    </thead>
+    <tbody>
+    <tr th:each="response:${response}">
+        <td th:text="${response.id}">name</td>
+        <td th:text="${response.amount}">price</td>
+
+
+    </tr>
+    </tbody>
+</table>
+
+<p><h3>List of all products in Order Id</h3></p>
+
+<table>
+    <thead>
+    <td><b>product Id</b></td>
+    <td><b>quantity</b></td>
+    <td><b>name</b></td>
+    <td><b>total</b></td>
+    </thead>
+    <tbody>
+
+    <tr th:each="info:${info}">
+        <td th:text="${info.productId}">name</td>
+        <td th:text="${info.quantity}">price</td>
+        <td th:text="${info.name}">tax</td>
+        <td th:text="${info.total}">tax</td>
+
+
+    </tr>
+
+    </tbody>
+</table>
+
+
+</body>
+</html>
+
